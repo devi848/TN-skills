@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="head">
+
+    <h1>
+        Party Budget Planner
+    </h1>
+
+    <p>
+        Plan your event with
+        AI-powered budget recommendations
+    </p>
+
+</section>
+
+
+<main class="formbox">
+
+    <form id="party-form">
+
+        <div class="box">
+
+            <h3>
+                💰 Basic Information
+            </h3>
+
+            <div class="grid">
+
+                <label>
+                    Total Budget (₹)
+
+                    <input
+                        name="total_budget"
+                        type="number"
+                        value="5000"
+                        min="1"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Guests
+
+                    <input
+                        name="num_guests"
+                        type="number"
+                        value="10"
+                        min="1"
+                    >
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="box">
+
+            <h3>
+                🎉 Event Details
+            </h3>
+
+
+            <div class="grid">
+
+                <label>
+                    Party Type
+
+                    <select name="party_type">
+
+                        <option>
+                            Birthday
+                        </option>
+
+                        <option>
+                            Wedding
+                        </option>
+
+                        <option>
+                            Anniversary
+                        </option>
+
+                        <option>
+                            College Event
+                        </option>
+
+                        <option>
+                            House Party
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+                    Venue Type
+
+                    <select name="venue_type">
+
+                        <option>
+                            Home
+                        </option>
+
+                        <option>
+                            Community Hall
+                        </option>
+
+                        <option>
+                            Restaurant
+                        </option>
+
+                        <option>
+                            Outdoor
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="box">
+
+            <h3>
+                📋 Party Needs
+            </h3>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="needs_catering"
+                    checked
+                >
+
+                Catering
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="needs_decoration"
+                >
+
+                Decoration
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="needs_entertainment"
+                    checked
+                >
+
+                Entertainment
+
+            </label>
+
+        </div>
+
+
+        <div class="box">
+
+            <textarea
+                name="additional_requirements"
+                placeholder="Theme, dietary restrictions, special requests, etc."
+            ></textarea>
+
+        </div>
+
+
+        <button
+            class="primary"
+            type="submit"
+        >
+            Generate Budget Plan
+        </button>
+
+    </form>
+
+
+    <div id="party-result"></div>
+
+</main>
+
+{% endblock %}

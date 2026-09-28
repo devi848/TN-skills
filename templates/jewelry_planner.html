@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="head">
+
+    <h1>
+        Jewelry Budget Planner
+    </h1>
+
+    <p>
+        Get occasion-aware jewelry
+        recommendations within your budget
+    </p>
+
+</section>
+
+
+<main class="formbox">
+
+    <form
+        id="jewelry-form"
+        enctype="multipart/form-data"
+    >
+
+        <div class="box">
+
+            <label>
+
+                Total Budget (₹)
+
+                <input
+                    name="budget"
+                    type="number"
+                    value="5000"
+                    min="1"
+                    required
+                >
+
+            </label>
+
+        </div>
+
+
+        <div class="box">
+
+            <label>
+
+                Occasion
+
+                <select name="occasion">
+
+                    <option>
+                        Birthday
+                    </option>
+
+                    <option>
+                        Wedding
+                    </option>
+
+                    <option>
+                        Anniversary
+                    </option>
+
+                    <option>
+                        Festival
+                    </option>
+
+                    <option>
+                        College Event
+                    </option>
+
+                    <option>
+                        Party
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                Style Preferences
+
+                <textarea
+                    name="style_preferences"
+                    placeholder="Preferred colors, materials, style, etc."
+                ></textarea>
+
+            </label>
+
+        </div>
+
+
+        <div class="box">
+
+            <label>
+
+                Optional Outfit Image
+
+                <input
+                    name="outfit_image"
+                    type="file"
+                    accept="
+                        image/png,
+                        image/jpeg,
+                        image/webp
+                    "
+                >
+
+            </label>
+
+            <small>
+                Maximum 5 MB.
+            </small>
+
+        </div>
+
+
+        <button
+            class="primary"
+            type="submit"
+        >
+            Get Recommendations
+        </button>
+
+    </form>
+
+
+    <div id="jewelry-result"></div>
+
+</main>
+
+{% endblock %}

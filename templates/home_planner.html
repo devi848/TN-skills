@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="head">
+
+    <h1>
+        Home Interior Budget Planner
+    </h1>
+
+    <p>
+        Personalized home recommendations
+        within your budget
+    </p>
+
+</section>
+
+
+<main class="formbox">
+
+    <form id="home-form">
+
+        <div class="box">
+
+            <h3>
+                💰 Basic Information
+            </h3>
+
+            <div class="grid">
+
+                <label>
+                    Total Budget (₹)
+
+                    <input
+                        name="total_budget"
+                        type="number"
+                        value="50000"
+                        min="1"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Lights
+
+                    <input
+                        name="num_lights"
+                        type="number"
+                        value="4"
+                        min="0"
+                    >
+                </label>
+
+
+                <label>
+                    Fans
+
+                    <input
+                        name="num_fans"
+                        type="number"
+                        value="2"
+                        min="0"
+                    >
+                </label>
+
+
+                <label>
+                    Furniture Pieces
+
+                    <input
+                        name="num_furniture"
+                        type="number"
+                        value="3"
+                        min="0"
+                    >
+                </label>
+
+
+                <label>
+                    Dining Tables
+
+                    <input
+                        name="num_dining_tables"
+                        type="number"
+                        value="1"
+                        min="0"
+                    >
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="box">
+
+            <h3>
+                🏠 Rooms
+            </h3>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="has_living_room"
+                    checked
+                >
+
+                Living Room
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="has_kitchen"
+                >
+
+                Kitchen
+
+            </label>
+
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    name="has_bedroom"
+                >
+
+                Bedroom
+
+            </label>
+
+        </div>
+
+
+        <div class="box">
+
+            <h3>
+                📝 Additional Requirements
+            </h3>
+
+            <textarea
+                name="additional_requirements"
+                placeholder="Style, colors, space constraints, etc."
+            ></textarea>
+
+        </div>
+
+
+        <button
+            class="primary"
+            type="submit"
+        >
+            Generate Budget Plan
+        </button>
+
+    </form>
+
+
+    <div id="home-result"></div>
+
+</main>
+
+{% endblock %}

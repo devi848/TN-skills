@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+
+{% block content %}
+
+<main class="auth">
+
+    <div class="panel">
+
+        <h1>
+            Create Your Account
+        </h1>
+
+
+        {% for error in errors %}
+
+            <p class="error">
+                {{ error }}
+            </p>
+
+        {% endfor %}
+
+
+        <form method="post">
+
+            <label>
+                Username
+
+                <input
+                    name="username"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Full name
+
+                <input
+                    name="full_name"
+                >
+            </label>
+
+
+            <label>
+                Email
+
+                <input
+                    name="email"
+                    type="email"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Password
+
+                <input
+                    name="password"
+                    type="password"
+                    minlength="6"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Confirm password
+
+                <input
+                    name="confirm_password"
+                    type="password"
+                    required
+                >
+            </label>
+
+
+            <button
+                class="primary"
+                type="submit"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p>
+            Already registered?
+
+            <a href="/login">
+                Sign in
+            </a>
+        </p>
+
+    </div>
+
+</main>
+
+{% endblock %}

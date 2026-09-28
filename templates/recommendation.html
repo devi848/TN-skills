@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recommendation
+{% endblock %}
+
+
+{% block content %}
+
+<section class="head">
+
+    <h1>
+        {{ record["title"] }}
+    </h1>
+
+    <p>
+        {{
+            record["created_at"]
+            [:19]
+            .replace("T", " ")
+        }}
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="total">
+
+        Total Budget:
+        ₹{{ "%.2f"|format(
+            result["total_budget"]
+        ) }}
+
+    </div>
+
+
+    <p>
+        {{ result["summary"] }}
+    </p>
+
+
+    {% for category in result["budget_breakdown"] %}
+
+        <article class="rec">
+
+            <div class="row">
+
+                <h3>
+                    {{ category["category"] }}
+                </h3>
+
+                <b>
+                    ₹{{ "%.2f"|format(
+                        category["allocation"]
+                    ) }}
+                </b>
+
+            </div>
+
+
+            {% for item in category["items"] %}
+
+                <div class="item">
+
+                    <div>
+
+                        <h4>
+                            {{ item["name"] }}
+                        </h4>
+
+                        <p>
+                            {{ item["description"] }}
+                        </p>
+
+                        <small>
+                            Qty {{ item["quantity"] }}
+                            · Est.
+                            ₹{{ "%.2f"|format(
+                                item["estimated_price"]
+                            ) }}
+                        </small>
+
+                    </div>
+
+
+                    <div>
+
+                        {% for platform, url
+                        in item["shopping_links"].items() %}
+
+                            <a
+                                class="chip"
+                                href="{{ url }}"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                {{ platform }}
+                            </a>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </article>
+
+    {% endfor %}
+
+
+    <div class="tips">
+
+        <b>
+            Tips
+        </b>
+
+        <ul>
+
+            {% for tip in result["tips"] %}
+
+                <li>
+                    {{ tip }}
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</section>
+
+{% endblock %}

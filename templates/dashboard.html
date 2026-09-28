@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<section class="head">
+
+    <h1>
+        Welcome,
+        {{ user["full_name"] or user["username"] }}!
+    </h1>
+
+    <p>
+        Your smart budget workspace
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="cards">
+
+        <a href="/home-planner">
+
+            <h3>
+                ⌂ Home Budget
+            </h3>
+
+            <p>
+                Interior and household
+                planning.
+            </p>
+
+        </a>
+
+
+        <a href="/party-planner">
+
+            <h3>
+                🥂 Party Budget
+            </h3>
+
+            <p>
+                Events, guests and services.
+            </p>
+
+        </a>
+
+
+        <a href="/jewelry-planner">
+
+            <h3>
+                ◇ Jewelry Budget
+            </h3>
+
+            <p>
+                Occasion and
+                style-aware ideas.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <h2>
+        Recent Recommendations
+    </h2>
+
+
+    {% if history %}
+
+        <div class="history">
+
+            {% for recommendation in history %}
+
+                <a
+                    href="/recommendation/{{ recommendation['id'] }}"
+                >
+
+                    <b>
+                        {{ recommendation["title"] }}
+                    </b>
+
+                    <small>
+                        {{
+                            recommendation["created_at"]
+                            [:19]
+                            .replace("T", " ")
+                        }}
+                    </small>
+
+                </a>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <p class="empty">
+            No recommendations yet.
+        </p>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
