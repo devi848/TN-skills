@@ -1,0 +1,20 @@
+System Design:
+
+User
+  ↓
+Web Interface
+  ↓
+PocketSmart AI
+  ↓
+AI Recommendation System
+  ↓
+Budget-Based Recommendations
+  ↓
+User
+
+Main Design Components:
+• Frontend
+• Backend
+• Database
+• AI Module
+• Recommendation Module

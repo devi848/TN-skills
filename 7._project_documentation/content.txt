@@ -1,0 +1,16 @@
+Documentation Includes:
+
+• Project Introduction
+• Problem Statement
+• Objectives
+• Requirement Analysis
+• System Design
+• Technologies Used
+• Development Process
+• Testing
+• Results
+• Screenshots
+• Conclusion
+• Future Enhancement
+
+All important project activities and results are recorded for reference.

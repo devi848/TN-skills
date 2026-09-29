@@ -1,0 +1,15 @@
+Project Name: PocketSmart AI
+
+Problem Identified:
+People often find it difficult to plan their budget for home interiors, parties, and jewellery purchases.
+
+Idea:
+Develop an AI-powered assistant that provides budget-based recommendations according to the user's needs and available budget.
+
+Main Features:
+• Home Interior Planner
+• Party Planner
+• Jewellery Planner
+• AI-based Recommendations
+• User Login and Registration
+• Recommendation History

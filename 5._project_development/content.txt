@@ -1,0 +1,18 @@
+Technologies Used:
+• Python
+• FastAPI
+• HTML
+• CSS
+• JavaScript
+• SQLite
+• Google Gemini AI
+
+Development Activities:
+• Created project structure
+• Developed user authentication
+• Created planner pages
+• Developed backend APIs
+• Connected SQLite database
+• Integrated AI recommendations
+• Added recommendation history
+• Added shopping/reference links

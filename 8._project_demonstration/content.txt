@@ -1,0 +1,14 @@
+Demonstration Steps:
+
+1. Start the PocketSmart AI application
+2. Show the home page
+3. Demonstrate user registration
+4. Demonstrate login
+5. Open the dashboard
+6. Demonstrate Home Planner
+7. Demonstrate Party Planner
+8. Demonstrate Jewellery Planner
+9. Show AI-generated recommendations
+10. Show recommendation history
+11. Explain the main technologies used
+12. Explain the project outcome

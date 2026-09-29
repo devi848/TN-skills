@@ -1,0 +1,16 @@
+Functional Requirements:
+• User registration and login
+• User input for budget and requirements
+• Home planning
+• Party planning
+• Jewellery planning
+• AI-generated recommendations
+• Save and view recommendation history
+• Image upload for jewellery planning
+
+Non-Functional Requirements:
+• Easy-to-use interface
+• Fast response
+• Secure user data
+• Responsive design
+• Reliable system performance
